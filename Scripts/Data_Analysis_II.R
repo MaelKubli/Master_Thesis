@@ -99,7 +99,7 @@ horo.r2 <- function(nullmod, fullmod){
 ###################################################################################################
 ### 6.1.1) H1 Models (GLM link = logit)
 ###################################################################################################
-modh1_0 <- glm(predict ~NULL, data = tweetsdf, family = binomial(link=logit))
+modh1_0 <- glm(predict ~ NULL, data = tweetsdf, family = binomial(link=logit))
 
 modh1_1 <- glm(predict ~ National, data = tweetsdf, family = binomial(link=logit))
 summary(modh1_1)

@@ -459,7 +459,7 @@ pl_time <- ggplot(tweets_hour, aes(x = created_at_hour, y = n, color = Bot_Not, 
 setwd("D:/CloudStation/Universitaet Zuerich/Master Thesis/Output/Plots")
 ggsave("Tweets_over_time.png", pl_time, width = 12, height =12, dpi = 300)
 ###################################################################################################
-### 4.3.2) Avergae Tweets by Pary Afiliation...
+### 4.3.2) Avergae Tweets by Party Afiliation...
 ###################################################################################################
 # Share of Tweets by Party Affiliation and Account Type
 repdemp <- tweetsdf %>% group_by(Republican, Democrats, predict) %>% summarize(n = n())
@@ -702,6 +702,7 @@ Validation_Metrics <- Validation_Metrics %>% filter(f1 == max(Validation_Metrics
 
 
 Variable_Importance <- read_csv("Variable_Importance_dl_grid_model_77.csv")
+Variable_Importance <- Variable_Importance %>% filter(scaled_importance != 0)
 
 varplot <- ggplot(Variable_Importance,aes(x=reorder(variable, scaled_importance), y =scaled_importance)) +
   geom_bar(stat="identity", width=0.5, color = "black", fill = "grey",

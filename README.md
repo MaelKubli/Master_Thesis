@@ -10,5 +10,11 @@ This Repository contains all the scripts used to do the data collection and anal
   - Data_Analysis.R
   - Data_Analysis_II.R
   - Data_analysis_II.R
+  - Botwiki_MYClassifier.R
+  
+  
+## Data 
+I only provide all the  data from the best classification model and the data used to test this Classifier on the bots I found on botwiki.org
+Therefore you can at least replicate the script (Botwiki_MYClassifier.R) which I used to test if the classifier works with known bots on twitter. 
   
   
